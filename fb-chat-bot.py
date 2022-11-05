@@ -97,65 +97,11 @@ class ChatBot(Client):
         try:
             if("search pdfiiixxd" in msg):
                 searchFiles(self)
-            elif("download youtubiiixdde" in msg):
-                headers = {
-                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
-                link = "".join(msg.split()[-3:])
-                yt_url = link
-                print("yt", yt_url)
-                try:
-                    yt_url = yt_url.replace(
-                        "youtu.be/", "www.youtube.com/watch?v=")
-                except:
-                    pass
-                #yt_url = yt_url.replace("youtube", "clipmega")
-                #url = requests.get(yt_url, headers=headers)
-                #soup = BeautifulSoup(url.text, "html.parser")
-                #link = soup.select(".btn-group > a")
-                #link = link[0]
-                #link = str(link)
-                #indx = link.find("href=")
-                #indx_l = link.find("extension=mp4")
-                #link = link[indx+6:indx_l+13].replace("amp;", "")
-                #link = link.replace(" ", "%20")
-                #final_link = link
-                #print("final", final_link)
-                #self.sendRemoteFiles(
-                 #   file_urls=final_link, message=None, thread_id=thread_id, thread_type=thread_type)
-            #elif("sarkojouch imakojouge" in msg):
-             #   imageSearch(self, msg)
-
-            #elif("prokojougram tkojouo" in msg):
-             #   programming_solution(self, msg)
-            #elif("trakojounslate" in msg):
-             #   reply = translator(self, msg, msg.split()[-1])
-
-                #sendQuery()
             elif "weakojouther okojouf" in msg:
                 indx = msg.index("weathkojouer okojouf")
                 query = msg[indx+11:]
                 reply = weather(query)
                 sendQuery()
-            elif "corokojouna okojouf" in msg:
-                corona_details(msg.split()[2])
-            elif ("calckojouulus" in msg):
-                stepWiseCalculus(" ".join(msg.split(" ")[1:]))
-            elif ("algekojoubra" in msg):
-                stepWiseAlgebra(" ".join(msg.split(" ")[1:]))
-            elif ("qkojouuery" in msg):
-                stepWiseQueries(" ".join(msg.split(" ")[1:]))
-
-            elif "fikojound" in msg:
-                app_id = "Y98QH3-24PWX83VGA"
-                client = wolframalpha.Client(app_id)
-                query = msg.split()[1:]
-                res = client.query(' '.join(query))
-                answer = next(res.results).text
-                reply = f'Answer: {answer.replace("sqrt", "√")}'
-                sendQuery()
-
-            elif ("searkojouch ukojouser" in msg or "seakojourch frikojoukojouend" in msg):
-                searchForUsers(self)
 
             elif("mkojouute convekojoursation" in msg):
                 try:
@@ -164,116 +110,9 @@ class ChatBot(Client):
                     sendQuery()
                 except:
                     pass
-            elif ("a" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("b" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KII 9MMII CH0D K3 M4J3 L3N3 W4L4  🙂 🙂 __  M9RK H3R3 )) ❤ (Y)"
-                sendMsg()
-            elif ("c" in msg):
-                time.sleep(10)
-                reply = "😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 🐧 😈 #TH3_UNB34T4BL3_M4RK_H3R3 (Y) 🐧 ♥"
-                sendMsg()
-            elif ("d" in msg):
-                time.sleep(10)
-                reply = "🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈  (Y) 🐧 😈 #TH3_M9RK_XD_H3R3 (Y) 🐧 ❤"
-                sendMsg()
-            elif ("e" in msg):
-                time.sleep(10)
-                reply = "😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O (Y) 🐧 😈 #TH3_UNB34T4BL3__Y0UR_F9TH3R_M4RK__H3R3 (Y) 🐧"
-                sendMsg()
-            elif ("f" in msg):
-                time.sleep(10)
-                reply = "T9TT0 K!! M99 K00_____________🤧________/ B47HR00M M3 CH0D K9R M44R D3N3 W4L4 D4R!!ND4_______________ M9RK H3R3 _______________😈"
-                sendMsg()
-            elif ("g" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("h" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("i" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("j" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("k" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("l" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("m" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("n" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("o" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("p" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("q" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("r" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("s" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("t" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("w" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("x" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("y" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("z" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif (":D" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("😃" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("😭" in msg):
-                time.sleep(10)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
-                sendMsg()
-            elif ("😕" in msg):
-                time.sleep(10)
+
+            elif ("😎" in msg):
+                time.sleep(120)
                 reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
             elif ("😜" in msg or "hlo" in msg):
@@ -337,62 +176,9 @@ class ChatBot(Client):
                                   thread_type=thread_type)
                         self.sendRemoteFiles(
                             file_urls=unsent_msg, message=None, thread_id=thread_id, thread_type=ThreadType.GROUP)
-                #else:
-                 #   if(thread_type == ThreadType.USER):
-                  #      reply = f"You just unsent a message:\n{unsent_msg} "
-                   #     self.send(Message(text=reply), thread_id=thread_id,
-                    #              thread_type=thread_type)
-                    #elif(thread_type == ThreadType.GROUP):
-                     #   user = self.fetchUserInfo(f"{author_id}")[
-                      #      f"{author_id}"]
-                       # username = user.name.split()[0]
-                        #reply = f"{username} just unsent a message:\n{unsent_msg}"
-                        #self.send(Message(text=reply), thread_id=thread_id,
-                            #      thread_type=thread_type)
 
             except:
                 pass
-
-    #def onColorChange(self, mid=None, author_id=None, new_color=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-     #   reply = "You changed the theme ✌️😎"
-      #  self.send(Message(text=reply), thread_id=thread_id,
-       #           thread_type=thread_type)
-
-    #def onEmojiChange(self, mid=None, author_id=None, new_color=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-     #   reply = "You changed the emoji 😎. Great!"
-      #  self.send(Message(text=reply), thread_id=thread_id,
-       #           thread_type=thread_type)
-
-    #def onImageChange(self, mid=None, author_id=None, new_color=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-     #   reply = "This image looks nice. 💕🔥"
-      #  self.send(Message(text=reply), thread_id=thread_id,
-       #           thread_type=thread_type)
-
-    #def onNicknameChange(self, mid=None, author_id=None, new_nickname=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-     #   reply = f"You just changed the nickname to {new_nickname} But why? 😁🤔😶"
-      #  self.send(Message(text=reply), thread_id=thread_id,
-       #           thread_type=thread_type)
-
-    #def onReactionRemoved(self, mid=None, author_id=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-     #   reply = "You just removed reaction from the message."
-      #  self.send(Message(text=reply), thread_id=thread_id,
-       #           thread_type=thread_type)
-
-    #def onCallStarted(self, mid=None, caller_id=None, is_video_call=None, thread_id=None, thread_type=None, ts=None, metadata=None, msg=None, ** kwargs):
-     #   reply = "You just started a call 📞🎥"
-      #  self.send(Message(text=reply), thread_id=thread_id,
-       #           thread_type=thread_type)
-
-    #def onCallEnded(self, mid=None, caller_id=None, is_video_call=None, thread_id=None, thread_type=None, ts=None, metadata=None, msg=None, ** kwargs):
-     #   reply = "Bye 👋🙋‍♂️"
-      #  self.send(Message(text=reply), thread_id=thread_id,
-       #           thread_type=thread_type)
-
-    #def onUserJoinedCall(mid=None, joined_id=None, is_video_call=None,
-     #                    thread_id=None, thread_type=None, **kwargs):
-      #  reply = f"New user with user_id {joined_id} has joined a call"
-       # self.send(Message(text=reply), thread_id=thread_id,
-        #          thread_type=thread_type)
 
 
 cookies = {
